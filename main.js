@@ -8,7 +8,7 @@ const contact = document.getElementById('contactlink');
 const github = document.getElementById('github');
 
 function homeAnimations() {
-    setTimeout(function(){intro.style.color = 'white';},1000);
+    setTimeout(function(){intro.style.color = 'var(--secondarycolour)';},1000);
     setTimeout(function(){info.style.color = 'white';},2000);
 }
 
