@@ -125,3 +125,15 @@ body {
     animation-delay: 2s;
 }
 
+#abouthead {
+    color: var(--maincolour);
+    font-size: 36px;
+    font-weight: 600px;
+    margin: 20px;
+}
+
+#abouttext {
+    width: 600px;
+    margin: 20px;
+}
+
