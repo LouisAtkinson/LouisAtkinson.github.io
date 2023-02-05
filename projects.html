@@ -8,26 +8,84 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
-<body onload="homeAnimations()">
+<body>
 
 
     <div id="headercontainer">
         <h1 id="header">Louis Atkinson</h1>
         <div id="menucontainer">
             <div id="aboutlink" class="menuitem">About</div>
+            <div id="skillslink" class="menuitem">Skills</div>
             <div id="projectslink" class="menuitem">Projects</div>
             <div id="contactlink" class="menuitem">Contact</div>
         </div>
     </div>
+    
 
-    <div id="maincontainer">
+    <div id="projectcontainer">
 
-        <div id="greeting">
-            <div id="hello">Hello!</div>
-            <div id="intro">I'm Louis</div>
-            <div id="info">A JavaScript front-end web <br>developer based in Sheffield</div>
+        <div id="projectshead" class="sectionhead">Projects</div>
+
+        <div class="project">
+            <div class="projectcontent">
+                <div class="projecthead">Battleships</div>
+                <div class="projecttext">A rendition of the classic game, where you can play against the computer</div>
+                <div class="buttons">
+                    <button class="button" onClick="battleships()">Demo</button>
+                    <button class="button" onClick="battleshipsCode()">Code</button>
+                </div>
+            </div>
+            <img class="projectimg" src="./images/battleships.png" alt="Screenshot of battleships game"></img>
         </div>
-   
+
+        <div class="project">
+            <div class="projectcontent">
+                <div class="projecthead">Noughts and crosses</div>
+                <div class="projecttext">Two-player noughts and crosses game</div>
+                <div class="buttons">
+                    <button class="button" onClick="noughtsAndCrosses()">Demo</button>
+                    <button class="button" onClick="noughtsAndCrossesCode()"">Code</button>
+                </div>
+            </div>
+            <img class="projectimg" src="./images/noughts.png" alt="Screenshot of noughts and crosses game"></img>
+        </div>
+
+        <div class="project">
+            <div class="projectcontent">
+                <div class="projecthead">Library</div>
+                <div class="projecttext">A library app for compiling a list of books that you have read or want to read</div>
+                <div class="buttons">
+                    <button class="button" onClick="library()">Demo</button>
+                    <button class="button" onClick="libraryCode()">Code</button>
+                </div>
+            </div>
+            <img class="projectimg" src="./images/library.png" alt="Screenshot of library app"></img>
+        </div>
+
+        <div class="project">
+            <div class="projectcontent">
+                <div class="projecthead">Etch-a-sketch</div>
+                <div class="projecttext">Choose the pixel size and draw with the cursor</div>
+                <div class="buttons">
+                    <button class="button" onClick="etchASketch()">Demo</button>
+                    <button class="button" onClick="etchASketchCode()">Code</button>
+                </div>
+            </div>
+            <img class="projectimg" src="./images/etch.png" alt="Screenshot of etch-a-sketch app"></img>
+        </div>
+
+        <div class="project">
+            <div class="projectcontent">
+                <div class="projecthead">Calculator</div>
+                <div class="projecttext">A simple, functional calculator app</div>
+                <div class="buttons">
+                    <button class="button" onClick="calculator()">Demo</button>
+                    <button class="button" onClick="calculatorCode()">Code</button>
+                </div>
+            </div>
+            <img class="projectimg" src="./images/calc.png" alt="Screenshot of calculator app"></img>
+        </div>
+        
     </div>
     
 </body>

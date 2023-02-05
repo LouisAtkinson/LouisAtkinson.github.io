@@ -28,6 +28,16 @@
     }
 }
 
+@keyframes wobble {
+    0% { transform: translateX(0%); } 
+    15% { transform: translateX(-10%) rotate(-6deg); } 
+    30% { transform: translateX(8%) rotate(4deg); } 
+    45% { transform: translateX(-6%) rotate(-3deg); } 
+    60% { transform: translateX(4%) rotate(3deg); }
+    75% { transform: translateX(-2%) rotate(-2deg); }
+    100% { transform: translateX(0%); } 
+ } 
+
 :root {
     --background: rgb(6, 0, 58);
     --maincolour: rgb(255, 0, 64);
@@ -84,7 +94,7 @@ body {
     border-bottom: solid 1px rgb(255, 255, 255, 1);
 }
 
-#maincontainer {
+#maincontainer, #projectcontainer {
     margin: 30px;
     align-self: center;
 }
@@ -125,15 +135,111 @@ body {
     animation-delay: 2s;
 }
 
-#abouthead {
+.sectionhead {
     color: var(--maincolour);
     font-size: 36px;
-    font-weight: 600px;
+    font-weight: 700px;
     margin: 20px;
+}
+
+.about {
+    min-width: 400px;
 }
 
 #abouttext {
-    width: 600px;
+    max-width: 600px;
     margin: 20px;
 }
 
+#skillshead {
+    margin-top: 30px;
+    align-self: center;
+}
+
+#skillscontainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 0px 50px;
+    gap: 50px;
+    width: 80%;
+}
+
+.subhead {
+    color: var(--maincolour);
+    font-size: 24px;
+    justify-self: center;
+    align-self: center;
+}
+
+#languages, #technologies {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    min-width: 400px;
+}
+
+svg {
+    height: 50px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#projectcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1000px;;
+}
+
+.projectcontent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#projectshead {
+    align-self: center;
+}
+
+.projecthead {
+    color: var(--maincolour);
+    font-size: 24px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    background-color: transparent;
+    border: solid 2px var(--maincolour);
+    color: var(--maincolour);
+    border-radius: 14px;
+    font-size: 14px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    animation-name: wobble;
+    animation-duration: 0.6s
+}
+
+.projectimg {
+    height: 200px;
+    width: 200px;
+    
+}
