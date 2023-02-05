@@ -60,6 +60,7 @@ body {
 }
 
 #headercontainer {
+    background-color: rgb(5, 0, 48);
     display: flex;
     align-items: center;
 }
