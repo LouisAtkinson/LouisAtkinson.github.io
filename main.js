@@ -5,6 +5,7 @@ const about = document.getElementById('aboutlink');
 const skills = document.getElementById('skillslink');
 const projects = document.getElementById('projectslink');
 const contact = document.getElementById('contactlink');
+const github = document.getElementById('github');
 
 function homeAnimations() {
     setTimeout(function(){intro.style.color = 'white';},1000);
@@ -31,12 +32,28 @@ contact.addEventListener('click', function() {
     window.location.href="contact.html";
 })
 
+document.getElementById('email').addEventListener('click', function() {
+    window.location.href="mailto:louisatkinson.la@gmail.com";
+})
+
+github.addEventListener('click', function() {
+    window.open('https://github.com/louisatkinson', '_blank');
+})
+
 function battleships() {
     window.open('https://louisatkinson.github.io/battleships', '_blank');
 }
 
 function battleshipsCode() {
     window.open('https://github.com/LouisAtkinson/battleships', '_blank');
+}
+
+function weather() {
+    window.open('https://louisatkinson.github.io/weather-app', '_blank');
+}
+
+function weatherCode() {
+    window.open('https://github.com/louisatkinson/weather-app', '_blank');
 }
 
 function noughtsAndCrosses() {

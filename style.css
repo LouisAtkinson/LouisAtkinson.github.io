@@ -43,13 +43,13 @@
     --maincolour: rgb(255, 0, 64);
 }
 
-/* html, body {
-    width: 100%;
+html, body {
+    width: 100vw;
     height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
-} */
+}
 
 body {
     background-color: var(--background);
@@ -189,10 +189,15 @@ svg {
     align-items: center;
 }
 
-#projectcontainer {
+#projectcontainer, #contactcontainer {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+#contactcontainer {
+    justify-content: center;
+    align-items: center;
 }
 
 .project {
@@ -241,5 +246,22 @@ svg {
 .projectimg {
     height: 200px;
     width: 200px;
-    
+}
+
+.contacttext {
+    font-size: 18px;
+}
+
+.contactlink {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(147, 255, 255)
+}
+
+#github, #email {
+    cursor: pointer;
+}
+
+#github:hover, #email:hover {
+    color: rgb(0, 192, 199);
 }
