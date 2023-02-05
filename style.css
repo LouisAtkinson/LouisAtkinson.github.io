@@ -199,6 +199,7 @@ svg {
 #contactcontainer {
     justify-content: center;
     align-items: center;
+    margin: 30px;
 }
 
 .project {
