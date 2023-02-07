@@ -39,9 +39,9 @@
  } 
 
 :root {
-    --background: rgb(8, 0, 78);
-    --maincolour: rgb(255, 0, 64);
-    --secondarycolour: rgb(27, 255, 255);
+    --background: rgb(12, 0, 116);
+    --maincolour: rgb(240, 0, 60);
+    --secondarycolour: rgb(0, 245, 245);
 }
 
 html, body {
@@ -61,7 +61,7 @@ body {
 }
 
 #headercontainer {
-    background-color: rgb(6, 0, 58);
+    background-color: rgb(8, 0, 80);
     width: 100%;
 }
 
@@ -164,10 +164,11 @@ body {
 #skillscontainer {
     display: flex;
     flex-direction: column;
-    margin: 20px 0px 0px 50px;
+    margin: 20px 0px 0px 00px;
     gap: 50px;
     width: 50%;
     max-width: 600px;
+    align-self: center;
 }
 
 .subhead {
@@ -182,6 +183,8 @@ body {
     width: 100%;
     justify-content: space-between;
     min-width: 300px;
+    justify-self: center;
+    align-self: center;
 }
 
 #languages {
@@ -198,6 +201,10 @@ svg {
     justify-content: center;
     align-items: center;
     gap: 6px;
+}
+
+.language {
+    width: 75px;
 }
 
 #projectcontainer, #contactcontainer {
