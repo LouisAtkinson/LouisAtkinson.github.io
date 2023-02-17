@@ -207,6 +207,7 @@ svg {
     gap: 6px;
     flex: 1 0 21%;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
 .language {
