@@ -40,6 +40,14 @@ github.addEventListener('click', function() {
     window.open('https://github.com/louisatkinson', '_blank');
 })
 
+function inventory() {
+    window.open('https://chess-library-production.up.railway.app/', '_blank');
+}
+
+function inventoryCode() {
+    window.open('https://github.com/LouisAtkinson/chess-library', '_blank');
+}
+
 function battleships() {
     window.open('https://louisatkinson.github.io/battleships', '_blank');
 }
