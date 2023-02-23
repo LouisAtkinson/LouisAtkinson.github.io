@@ -291,3 +291,20 @@ svg {
 #github:hover, #email:hover {
     color: rgb(0, 192, 199);
 }
+
+@media (max-width: 600px) {
+    #header {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .menuitem {
+        font-size: 13px;
+        padding: 0px;
+    }
+
+    #menucontainer {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+}
