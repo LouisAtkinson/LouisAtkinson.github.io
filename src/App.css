@@ -351,13 +351,13 @@ textarea, input {
   }
 
   .header a {
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 10px;
     margin-left: 5px;
   }
 
   .logo a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .nav-link {
@@ -383,17 +383,17 @@ textarea, input {
 
   .about-content p.hello,
   .about-content p.name {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .about-content p.hello {
     top: -30px;
-    left: -70px;
+    left: -60px;
   }
   
   .about-content p.name {
     bottom: -10px;
-    right: -100px;
+    right: -90px;
   }
 
   .about-content .about-text p {
@@ -401,7 +401,7 @@ textarea, input {
   }
 
   .profile-image {
-    max-width: 200px;
+    max-width: 170px;
   }
 
   .contact h2 {
@@ -429,5 +429,60 @@ textarea, input {
 
   .contact-form button {
     font-size: 14px;
+  }
+
+  .logo {
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .app {
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  .header {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .header a {
+    font-size: 16px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header a {
+    font-size: 14px;
+  }
+
+  .logo a {
+    font-size: 18px;
+  }
+
+  .about-content p.hello,
+  .about-content p.name {
+    font-size: 22px;
+  }
+
+  .about-content p.hello {
+    top: -30px;
+    left: -50px;
+  }
+  
+  .about-content p.name {
+    bottom: -10px;
+    right: -80px;
+  }
+
+  .profile-image {
+    max-width: 150px;
   }
 }
