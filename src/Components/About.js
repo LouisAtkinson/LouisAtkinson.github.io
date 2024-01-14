@@ -5,6 +5,7 @@ const About = () => {
   const [showImage, setShowImage] = useState(false);
   const [showName, setShowName] = useState(false);
   const [showText, setShowText] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const startAnimation = () => {
     setTimeout(() => setShowHello(true), 0);
@@ -13,9 +14,15 @@ const About = () => {
     setTimeout(() => setShowText(true), 1500);
   };
 
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   useEffect(() => {
-    startAnimation();
-  }, []);
+    if (imageLoaded) {
+      startAnimation();
+    }
+  }, [imageLoaded]);
 
   return (
     <div className="about">
@@ -26,6 +33,7 @@ const About = () => {
             src={require('../Images/me.jpeg')}
             alt="Your Name"
             className={`profile-image ${showImage ? 'fade-in active' : ''}`}
+            onLoad={handleImageLoad}
           />
           <p className={`fade-in-right name ${showName ? 'active' : ''}`}>I'm Louis</p>
         </div>
