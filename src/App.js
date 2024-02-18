@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css'; // Import the CSS for styling
 import Header from './Components/Header';
+import Home from './Components/Home';
 import About from './Components/About';
 import Portfolio from './Components/Portfolio';
 import Contact from './Components/Contact';
@@ -13,7 +14,8 @@ const App = () => {
       <Header />
       <main className="content">
         <Routes>
-          <Route path="/" element={< About />} />
+          <Route path="/" element={< Home />} />
+          <Route path="/about" element={< About />} />
           <Route path="/portfolio" element={< Portfolio />} />
           <Route path="/contact" element={< Contact />} />a
         </Routes>

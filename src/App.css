@@ -15,6 +15,14 @@ textarea, input {
   box-sizing: border-box;
 }
 
+.green {
+  color: #34ba84;
+}
+
+.pink {
+  color: #f33581;
+}
+
 .app {
   max-width: 1200px;
   margin: 0 auto;
@@ -25,6 +33,7 @@ textarea, input {
 .content {
   padding: 20px;
   margin-top: 60px;
+  height: 100vh;
 }
 
 .header {
@@ -35,7 +44,7 @@ textarea, input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
+  background-color: #0F0F0F;
   color: #fff;
   padding: 0px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
@@ -45,8 +54,8 @@ textarea, input {
 .header a {
   text-decoration: none;
   font-size: 24px;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin-right: 15px;
+  margin-left: 9px;
 }
 
 .logo a {
@@ -63,7 +72,7 @@ textarea, input {
 .nav-link {
   color: #fff;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 15px;
   font-size: 16px;
   transition: color 0.3s ease;
 }
@@ -167,7 +176,7 @@ textarea, input {
   text-align: center;
   gap: 20px;
   padding-top: 20px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .intro {
@@ -220,19 +229,32 @@ textarea, input {
   transform: translateX(0);
 }
 
-.about-content .about-text {
+.about-content .intro-text {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.about-content .about-text.active {
+.about-content .intro-text.active {
   opacity: 1;
+}
+
+.intro-text {
+  border-radius: 20px;
+  font-size: 34px;
+  padding: 10px;
+  font-weight: 500;
+  margin-top: -30px;
+}
+
+.intro-text p {
+  padding: 0px 10px 0px 10px;
+  max-width: 400px;
 }
 
 .about-text {
   background-color: #1a1a1a;
   border-radius: 20px;
-  font-size: 19px;
+  font-size: 20px;
   padding: 10px;
 }
 
@@ -249,7 +271,7 @@ textarea, input {
   align-items: center;
 }
 
-.contact h2 {
+.contact h2, .about-text h2 {
   font-size: 28px;
   margin: 0 0 20px;
   color: #cd4178;
@@ -323,7 +345,7 @@ textarea, input {
 }
 
 .footer {
-  background-color: #000;
+  background-color: #0F0F0F;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -345,7 +367,7 @@ textarea, input {
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
   .header {
     padding: 0px 10px;
   }
@@ -388,16 +410,17 @@ textarea, input {
 
   .about-content p.hello {
     top: -30px;
-    left: -60px;
+    left: -70px;
   }
   
   .about-content p.name {
     bottom: -10px;
-    right: -90px;
+    right: -100px;
   }
 
-  .about-content .about-text p {
-    font-size: 18px;
+  .about-content .intro-text p {
+    font-size: 30px;
+    font-weight: 500;
   }
 
   .profile-image {
@@ -436,7 +459,7 @@ textarea, input {
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 475px) {
   .app {
     padding: 10px;
     padding-top: 20px;
@@ -448,7 +471,7 @@ textarea, input {
   }
 
   .header a {
-    font-size: 16px;
+    font-size: 15px;
     margin-right: 5px;
     margin-left: 5px;
   }
@@ -458,7 +481,7 @@ textarea, input {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 385px) {
   .header a {
     font-size: 14px;
   }
