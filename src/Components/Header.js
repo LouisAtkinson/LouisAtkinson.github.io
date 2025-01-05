@@ -1,29 +1,47 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ isMobileNavOpen, onMobileNavToggle }) => {
   const location = useLocation();
 
   return (
     <header className="header">
       <div className="left">
-        <h1 className="logo">
-          <Link to="/">Louis Atkinson</Link>
-        </h1>
+        <p className="logo">
+          <Link to="/">LOUIS <span className="pink">ATKINSON</span></Link>
+        </p>
       </div>
       <div className="right">
+        {!isMobileNavOpen && (
+          <div className="burger-menu" onClick={onMobileNavToggle}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+        )}
+        {isMobileNavOpen && (
+          <div className="close-button" onClick={onMobileNavToggle}>
+            &times;
+          </div>
+        )}
         <nav className="nav">
-          <Link to="/" className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}>
-            Home
+          <Link 
+            to="/about" 
+            className={location.pathname === '/about' ? 'nav-link active' : 'nav-link'}
+          >
+            ABOUT
           </Link>
-          <Link to="/about" className={location.pathname === '/about' ? 'nav-link active' : 'nav-link'}>
-            About
+          <Link 
+            to="/portfolio" 
+            className={location.pathname === '/portfolio' ? 'nav-link active' : 'nav-link'}
+          >
+            PORTFOLIO
           </Link>
-          <Link to="/portfolio" className={location.pathname === '/portfolio' ? 'nav-link active' : 'nav-link'}>
-            Portfolio
-          </Link>
-          <Link to="/contact" className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'}>
-            Contact
+          <Link 
+            to="/contact" 
+            className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'}
+          >
+            CONTACT
           </Link>
         </nav>
       </div>

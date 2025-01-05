@@ -1,28 +1,68 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const About = () => {
+  const [showCV, setShowCV] = useState(false);
+
   return (
-    <div className="about">
+    <div className="about-container">
       <div className="about-content">
-        <div className={`about-text active`}>
-          <h2>Welcome!</h2>
+        <div className={`about-text ${!showCV ? 'active' : ''}`}>
+          <h2>ABOUT</h2>
           <p className="fade-in">
-            I'm Louis Atkinson, a Sheffield-based software developer. 
-            My current role is in front-end game development using Pixi.js, 
-            where I take pride in creating engaging and visually stunning user experiences.
+            Hello! I’m Louis Atkinson, a Sheffield-based software developer with a passion for solving complex problems and learning new things. 
+            In my current role, I specialise in front-end development, particularly in game development, 
+            where I take pride in creating visually engaging projects that provide an excellent user experience. 
+            Some of these can be seen in my portfolio.
           </p>
           <p className="fade-in">
-            Outside of game development, I am skilled in full-stack development, 
-            as showcased in my portfolio.
-            I have a passion for crafting responsive user interfaces using React.js, 
-            and my skills 
-            extend to creating feature-rich applications with technologies like Express.js.
-          </p>        
-          <p className="fade-in">
-            If you're looking for a developer who appreciates the balance between innovation and practicality, 
-            feel free to explore my portfolio and reach out with any questions.
+            While my professional work currently focuses on the front-end, I’m equally comfortable across the entire stack. 
+            In my free time, I enjoy building full-stack applications, 
+            which allows me to sharpen both my front-end and back-end skills and learn new technologies. 
+            This enables me to tackle a wide range of challenges, from crafting intuitive interfaces to implementing efficient back-end logic, 
+            ensuring everything works seamlessly.
+          </p>
+          {false && (
+            <p className="fade-in">
+              I’m driven by the opportunity to grow as a developer, always seeking to improve and tackle new challenges. 
+              For example, I’m currently working towards the AWS Solutions Architect Associate certification and 
+              applying these skills in the development of a chess website.
+            </p>
+          )}
+          <p>
+            If you’re looking for a developer who’s adaptable, eager to learn, and proficient across both the front-end and back-end, 
+            feel free to explore my portfolio or get in touch.
           </p>
         </div>
+
+        {showCV && (
+          <div className={`about-text cv ${showCV ? 'active' : ''}`}>
+            <embed 
+              src="/assets/Louis-Atkinson-CV.pdf" 
+              type="application/pdf" 
+              width="100%" 
+              height="100%" 
+              style={{ maxHeight: '1120px', objectFit: 'contain' }}
+            />
+            <a href="/assets/Louis-Atkinson-CV.pdf" download className="download-btn">
+              DOWNLOAD CV
+            </a>
+          </div>
+        )}
+      </div>
+
+      <div className="about-buttons">
+        <button 
+          className={`btn ${!showCV ? 'active' : ''}`} 
+          onClick={() => setShowCV(false)}
+        >
+          ABOUT
+        </button>
+        <button 
+          className={`btn ${showCV ? 'active' : ''}`} 
+          onClick={() => setShowCV(true)}
+        >
+          CV
+        </button>
       </div>
     </div>
   );
