@@ -3,9 +3,9 @@ import React from 'react';
 const Contact = () => {
   return (
     <div className="contact">
-      <div className='contact-title'>CONTACT</div>
+      <div className="contact-title">CONTACT</div>
       <div className="contact-content">
-        <p className='feel-free'>
+        <p className="feel-free">
           Feel free to get in touch with me via the following methods or by
           filling out the contact form below:
         </p>
@@ -20,15 +20,33 @@ const Contact = () => {
         >
           <div className="form-group">
             <label htmlFor="name">NAME</label>
-            <input type="text" id="name" name="name" required />
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required 
+              autoComplete="name" 
+            />
           </div>
           <div className="form-group">
             <label htmlFor="email">EMAIL</label>
-            <input type="email" id="email" name="email" required />
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              autoComplete="email" 
+            />
           </div>
           <div className="form-group">
             <label htmlFor="message">MESSAGE</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="6" 
+              required
+              autoComplete="off"
+            ></textarea>
           </div>
           <button type="submit">SEND MESSAGE</button>
         </form>

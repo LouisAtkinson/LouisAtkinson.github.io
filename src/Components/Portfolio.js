@@ -5,26 +5,26 @@ const Portfolio = () => {
     {
       title: 'Monopoly Super Wheel Bonus',
       description: 'An online slot machine game I built the front-end for using the PixiJS and GSAP libraries.',
-      imageUrl: 'images/monopoly-super-wheel-bonus.png',
+      imageUrl: 'images/monopoly-super-wheel-bonus.jpg',
       projectUrl: 'https://slotslaunch.com/light-and-wonder/monopoly-super-wheel-bonus'
     },
     {
       title: 'Yukon Gold',
       description: 'Another online slot machine game I built the front-end for using the PixiJS and GSAP libraries.',
-      imageUrl: 'images/yukon-gold.png',
+      imageUrl: 'images/yukon-gold.jpg',
       projectUrl: 'https://slotslaunch.com/crucible-gaming/yukon-gold'
     },
     {
       title: 'Socialise',
       description: 'A Facebook-inspired social media site built using React.js and Typescript on the front-end, and Express.js and MongoDB on the back-end.',
-      imageUrl: 'images/socialise.png',
+      imageUrl: 'images/socialise.jpg',
       projectUrl: 'https://socialise-lz3f.vercel.app',
       githubUrl: 'https://github.com/LouisAtkinson/socialise',
     },
     {
       title: 'React store',
       description: 'A modern web store built using React.js.',
-      imageUrl: 'images/react-store.png',
+      imageUrl: 'images/react-store.jpg',
       projectUrl: 'https://louisatkinson.co.uk/react-store',
       githubUrl: 'https://github.com/LouisAtkinson/react-store',
     },
