@@ -410,6 +410,10 @@ body, html {
   white-space: nowrap;
 }
 
+.fade-in {
+  margin-top: 10px;
+}
+
 .name.fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -428,7 +432,7 @@ body, html {
 .about-text {
   background-color: var(--content-background);
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 22px;
   padding: 10px 30px;
   display: none;
   flex-direction: column;
