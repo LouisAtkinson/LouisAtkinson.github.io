@@ -10,7 +10,7 @@ const About = () => {
           <h2>ABOUT</h2>
           <p className="fade-in">
           Hello! I’m Louis Atkinson, a Sheffield-based software developer with a passion for solving complex problems and learning new technologies. 
-          In my current role, I specialise in full-stack development, with experience in game development using Java and JavaScript. 
+          In my current role, I specialise in full-stack development, using mostly Java and JavaScript. 
           I take pride in creating efficient, well-designed systems that deliver a great user experience. Some of my work can be seen in my portfolio.
           </p>
           {
@@ -58,21 +58,24 @@ const About = () => {
         )}
       </div>
 
-      <div className="about-buttons">
-        <button 
-          className={`btn ${!showCV ? 'active' : ''}`} 
-          onClick={() => setShowCV(false)}
-        >
-          ABOUT
-        </button>
-        <button 
-          className={`btn ${showCV ? 'active' : ''}`} 
-          onClick={() => setShowCV(true)}
-        >
-          CV
-        </button>
+      {false && 
+        (<div className="about-buttons">
+            <button 
+              className={`btn ${!showCV ? 'active' : ''}`} 
+              onClick={() => setShowCV(false)}
+            >
+              ABOUT
+            </button>
+            <button 
+              className={`btn ${showCV ? 'active' : ''}`} 
+              onClick={() => setShowCV(true)}
+            >
+              CV
+            </button>
+          </div>
+        )
+      }
       </div>
-    </div>
   );
 };
 
