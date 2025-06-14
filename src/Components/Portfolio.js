@@ -3,6 +3,18 @@ import React from 'react';
 const Portfolio = () => {
   const projects = [
     {
+      title: 'Socialise',
+      description: `This social media site is built with React and TypeScript on the front-end, and .NET on the back-end, using PostgreSQL as the database.
+      
+      It is deployed on AWS using Elastic Beanstalk, S3, CloudFront, and Route 53 for reliable and scalable hosting.`,
+      imageUrl: 'images/socialise.jpg',
+      projectUrl: 'https://socialise.cloud',
+      githubUrls: [
+        { label: 'Front-end', url: 'https://github.com/LouisAtkinson/socialise' },
+        { label: 'Back-end', url: 'https://github.com/LouisAtkinson/socialise.NET' }
+      ],
+    },
+    {
       title: 'Monopoly Super Wheel Bonus',
       description: 'An online slot machine game built using the PixiJS and GSAP libraries. It was a complicated project, featuring multiple (sometimes simultaneous) bonuses, including cascades, expanding reels, and a pick game.',
       imageUrl: 'images/monopoly-super-wheel-bonus.jpg',
@@ -19,13 +31,6 @@ const Portfolio = () => {
       description: 'A slot machine game originally developed for casino cabinets, which I ported to web and mobile platforms. The performance was optimised to ensure smooth gameplay while preserving the high-quality visuals of the original.',
       imageUrl: 'images/monster-catch.jpg',
       projectUrl: 'https://slotslaunch.com/light-and-wonder/monster-catch'
-    },
-    {
-      title: 'Socialise',
-      description: 'A Facebook-inspired social media site built using React.js and Typescript on the front-end, and Express.js and MongoDB on the back-end. Users can sign up, customise their profiles, connect and interact with friends, create posts, and upload profile pictures. Authentication is secured using JSON Web Tokens (JWT).',
-      imageUrl: 'images/socialise.jpg',
-      projectUrl: 'https://socialise-lz3f.vercel.app',
-      githubUrl: 'https://github.com/LouisAtkinson/socialise',
     }
   ];
 
@@ -36,17 +41,26 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <div className="project" key={index}>
             <a className="project-main-link" href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-            <img src={project.imageUrl} alt={project.title} />
+              <img src={project.imageUrl} alt={project.title} />
               <h3 className="project-title">{project.title}</h3>
             </a>
-            <p>{project.description}</p>
+            <p style={{ whiteSpace: 'pre-line' }}>{project.description}</p>
             <div className="project-links">
               <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-                View project
+                Live demo
               </a>
-              {project.githubUrl && (<a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                View on GitHub
-              </a>)}
+              {project.githubUrls 
+                ? project.githubUrls.map(({ label, url }) => (
+                    <a key={url} href={url} target="_blank" rel="noopener noreferrer">
+                      {label} code
+                    </a>
+                  ))
+                : project.githubUrl && (
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      View on GitHub
+                    </a>
+                  )
+              }
             </div>
           </div>
         ))}
